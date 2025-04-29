@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contoh Halaman</title>
+  <style>
+    h3 {
+      font-size: 24px;
+      color: black;
+    }
+
+    p {
+      font-size: 16px;
+      color: black;
+    }
+
+    .big-text {
+      font-size: 48px;
+      color: black;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      padding-left: 20px;
+    }
+
+    ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: black;
+      font-size: 18px;
+      padding: 8px;
+      background-color: lightgray;
+      border-radius: 5px;
+    }
+
+    ul li a:hover {
+      background-color: gray;
+      color: white;
+    }
+
+    #back-to-top {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background-color: lightgray;
+      padding: 10px;
+      border-radius: 5px;
+      display: none;
+    }
+
+    #back-to-top:hover {
+      background-color: gray;
+      color: white;
+    }
+
+    #halfway {
+      margin-top: 50%;
+    }
+
+    #bottom {
+      margin-top: 1500px;
+    }
+
+    #para2 {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <ul>
+    <li><a href="#para2">Go to Paragraph 2</a></li>
+  </ul>
+
+  <!-- Konten -->
+  <h3>This is an h3 block.</h3>
+  <h3>This is an h3 block.</h3>
+  <h3>This is an h3 block.</h3>
+  <h3>This is an h3 block.</h3>
+  <h3>This is an h3 block.</h3>
+  <h3>This is an h3 block.</h3>
+  <h3>This is an h3 block.</h3>
+  <h3>This is an h3 block.</h3>
+  <h3>This is an h3 block.</h3>
+  <h3>This is an h3 block.</h3>
+
+  <p>This is paragraph 1.</p>
+
+  <!-- Paragraph 2 -->
+  <p id="para2">This is paragraph 2.</p>
+
+  <!-- Big Text -->
+  <div class="big-text">
+    This is an h3 block.<br>
+    This is an h3 block.<br>
+    This is an h3 block.<br>
+    This is an h3 block.<br>
+    This is an h3 block.<br>
+    This is an h3 block.<br>
+    This is an h3 block.<br>
+    This is an h3 block.<br>
+    This is an h3 block.<br>
+    This is an h3 block.<br>
+  </div>
+
+  <!-- Bagian bawah -->
+  <div id="bottom">
+    <h3>Bagian Bawah</h3>
+    <p>Konten di bagian bawah halaman...</p>
+  </div>
+
+  <!-- Tombol kembali ke atas -->
+  <div id="back-to-top">
+    <a href="#">Back to Top</a>
+  </div>
+
+  <script>
+    window.onscroll = function() {
+      var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+      var backToTopButton = document.getElementById('back-to-top');
+
+      if (scrollPosition > 300) {
+        backToTopButton.style.display = 'block';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    };
+
+    document.getElementById('back-to-top').onclick = function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+  </script>
+
+</body>
+</html>
